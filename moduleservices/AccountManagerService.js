@@ -5,7 +5,7 @@ module.exports = {
     withdrawal: (userId,reflexId,currency,amountStr)=>({parasType:['long','string','string','string(BigDecimal)'],resultType:'object'}),
     paymentStatus: (orderId)=>({parasType:['string'],resultType:'object'}),
     adjustmentStatus: (orderId)=>({parasType:['string'],resultType:'object'}),
-    payment: (userId,reflexId,target,amountStr)=>
+    payment: (userId,reflexId,target,amountStr, currency, orderId, remark, readOnly)=>
         ({parasType:['long','string','string','string(BigDecimal)','string','string','string','boolean'],resultType:'object'}),
     accountWithdrawal: (userId,amountStr,currency,orderId,address,addressExtend)=>
         ({parasType:['long','string','string','string','string','object'],resultType:'object'}),
